@@ -39,7 +39,7 @@ jobs:
             app_id: ${{ secrets.GH_APP_ID }}
             private_key: ${{ secrets.GH_APP_PRIVATE_KEY }}
 
-      - uses: google-github-actions/release-please-action@v4
+      - uses: googleapis/release-please-action@v4
         name: release-please
         id: release
         with:
