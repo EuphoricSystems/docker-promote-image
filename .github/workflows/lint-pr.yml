@@ -16,7 +16,7 @@ jobs:
     name: Validate PR title
     runs-on: ubuntu-latest
     steps:
-      - uses: tibdex/github-app-token@v2
+      - uses: tibdex/github-app-token@v2.1.0
         id: get_installation_token
         with:
           app_id: ${{ secrets.GH_APP_ID }}

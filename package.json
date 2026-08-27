@@ -21,7 +21,7 @@
     ".": "./dist/index.js"
   },
   "engines": {
-    "node": ">=20"
+    "node": "v26.8.1"
   },
   "scripts": {
     "bundle": "yarn run format:write && yarn run package",

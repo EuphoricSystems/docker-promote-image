@@ -26,20 +26,20 @@ jobs:
       release_created: ${{ steps.release.outputs.release_created }}
       semver: ${{steps.release.outputs.major}}.${{steps.release.outputs.minor}}.${{steps.release.outputs.patch}}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4.4.0
         with:
           fetch-depth: 0
 
       - name: Commit Linter
-        uses: wagoid/commitlint-github-action@v5
+        uses: wagoid/commitlint-github-action@v5.5.1
 
-      - uses: tibdex/github-app-token@v2
+      - uses: tibdex/github-app-token@v2.1.0
         id: get_installation_token
         with:
             app_id: ${{ secrets.GH_APP_ID }}
             private_key: ${{ secrets.GH_APP_PRIVATE_KEY }}
 
-      - uses: google-github-actions/release-please-action@v4
+      - uses: google-github-actions/release-please-action@v4.1.1
         name: release-please
         id: release
         with:
